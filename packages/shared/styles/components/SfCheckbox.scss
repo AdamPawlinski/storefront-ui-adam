@@ -1,0 +1,41 @@
+@import '../variables';
+
+$checkbox__label-font-size: 1.125rem !default;
+$checkbox__checkmark-transition: background-color 0.25s cubic-bezier(1, 0.5, 0.8, 1), border-color 0.25s cubic-bezier(1, 0.5, 0.8, 1) !default;
+$checkbox__checkmark-size: 1.4375rem !default;
+$checkbox__checkmark-primary-color: $c-green-primary !default;;
+$checkbox__checkmark-secondary-color: $c-gray-secondary !default;;
+
+.sf-checkbox {
+  &__input {
+    display: none;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 $checkbox__checkmark-size;
+    height: $checkbox__checkmark-size;
+    border: 1px solid $checkbox__checkmark-secondary-color;
+    box-sizing: border-box;
+    transition: $checkbox__checkmark-transition;
+    &.is-active {
+      background-color: $checkbox__checkmark-primary-color;
+      border-color: transparent;
+    }
+    &:hover {
+      border-color: $checkbox__checkmark-primary-color;
+      transition: $checkbox__checkmark-transition;
+    }
+  }
+  &__label {
+    font-size: $checkbox__label-font-size;
+    margin-left: $spacer-big;
+    font-family: $body-font-family-secondary;
+  }
+}
