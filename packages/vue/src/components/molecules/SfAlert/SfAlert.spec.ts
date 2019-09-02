@@ -23,7 +23,7 @@ describe("SfAlert.vue", () => {
         message
       }
     });
-    expect(component.find(".sf-alert__text").text()).toMatch(message);
+    expect(component.find(".sf-alert__message").text()).toMatch(message);
   });
 
   it("renders an alert icon when passed via props", () => {

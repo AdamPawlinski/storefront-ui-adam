@@ -1,136 +1,66 @@
 @import '../variables';
-
+@import '../components/SfIcon.scss';
 // $component__block-property: value;
-
 // .sf-notification {
 //   &__element {
-
 //   }
 //   &--modifier {
-
 //   }
 // }
-/* Group 3.3 */
-
-position: absolute;
-width: 559px;
-height: 81px;
-left: 331px;
-top: 274px;
-
-/* Rectangle */
-
-position: absolute;
-width: 559px;
-height: 81px;
-left: 331px;
-top: 274px;
-
-/* Green/Primary */
-
-background: #5ECE7B;
-
-/* cart shadow */
-
-box-shadow: 0px 8px 11px rgba(0, 0, 0, 0.1);
-border-radius: 5px;
-
-/* Group 2.1 */
-
-position: absolute;
-width: 31.56px;
-height: 29.7px;
-left: 351.44px;
-top: 299.54px;
-
-/* Subtract */
-
-position: absolute;
-width: 31.56px;
-height: 21.47px;
-left: 351.44px;
-top: 299.54px;
-background: #FFFFFF;
-
-/* Vector */
-
-position: absolute;
-left: 28.78%;
-right: 68.63%;
-top: 32.7%;
-bottom: 64.96%;
-background: #FFFFFF;
-
-/* Vector */
-
-position: absolute;
-left: 29.98%;
-right: 69.21%;
-top: 33.73%;
-bottom: 65.39%;
-background: #000000;
-
-/* Group */
-
-position: absolute;
-left: 29.59%;
-right: 68.91%;
-top: 35.19%;
-bottom: 64.06%;
-
-/* Vector */
-
-position: absolute;
-left: 29.59%;
-right: 69.84%;
-top: 35.19%;
-bottom: 64.06%;
-background: #FFFFFF;
-
-/* Vector */
-
-position: absolute;
-left: 30.53%;
-right: 68.91%;
-top: 35.19%;
-bottom: 64.06%;
-background: #FFFFFF;
-
-/* Added to cart */
-
-position: absolute;
-width: 123px;
-height: 40px;
-left: 403px;
-top: 284px;
-font-family: SangBleu Sans;
-font-size: 18px;
-line-height: 222.88%;
-
-/* or 40px */
-
-color: #FFFFFF;
-
-/* This is informative message for the user View cart */
-
-position: absolute;
-width: 384px;
-height: 36px;
-left: 403px;
-top: 310px;
-font-family: SangBleu Sans;
-font-size: 16px;
-line-height: 222.88%;
-
-/* identical to box height, or 36px */
-
-color: #FFFFFF;
-
-/* Vector */
-
-position: absolute;
-left: 70.93%;
-right: 27.96%;
-top: 31%;
-bottom: 67.51%;
-background: #FFFFFF;
+$notification__message-padding-left: 0.625rem !default;
+$notification--info-color: $c-dark-primary !default;
+$notification--warning-color: #d12727 !default;
+$notification--alert-color: #0468db !default;
+$notification--success-color: #128830 !default;
+.sf-notification {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border-radius: 10%;
+    min-height: 9rem;
+    padding: $banner-mobile-padding;
+    background-size: $banner-background-size;
+    background-position: $banner-background-position;
+    &__container {
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.8);
+        @media (min-width: $desktop-min) {
+            min-width: 20vw;
+        }
+    }
+    &__message {
+        text-align: left;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        @media (min-width: $desktop-min) {
+            font-size: $banner__title-font-size;
+        }
+    }
+    &__icon {
+        @media (min-width: $desktop-min) {
+            display: flex;
+        }
+    }
+    &__vector {}
+    &--info {
+        color: $notification--info-color;
+        fill: $notification--info-color;
+    }
+    &--alert {
+        fill: $notification--notification-color;
+        color: $notification--notification-color;
+    }
+    &--warning {
+        fill: $notification--warning-color;
+        color: $notification--warning-color;
+    }
+    &--success {
+        fill: $notification--success-color;
+        color: $notification--success-color;
+    }
+}
