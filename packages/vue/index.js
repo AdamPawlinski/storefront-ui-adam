@@ -22,6 +22,7 @@ import SfCounter from "./src/components/molecules/SfCounter/SfCounter.vue";
 import SfFilter from "./src/components/molecules/SfFilter/SfFilter.vue";
 import SfGallery from "./src/components/molecules/SfGallery/SfGallery.vue";
 import SfMenuItem from "./src/components/molecules/SfMenuItem/SfMenuItem.vue";
+import SfNotification from "./src/components/molecules/SfNotification/SfNotification.vue";
 import SfOptions from "./src/components/molecules/SfOptions/SfOptions.vue";
 import SfPagination from "./src/components/molecules/SfPagination/SfPagination.vue";
 import SfProductCard from "./src/components/molecules/SfProductCard/SfProductCard.vue";
@@ -85,5 +86,6 @@ export {
   SfStoreLocator,
   SfImage,
   SfBannerGrid,
-  SfBottomNavigation
+  SfBottomNavigation,
+  SfNotification
 };

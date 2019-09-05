@@ -16,6 +16,7 @@ import SfCounter from "./src/components/molecules/SfCounter/SfCounter.js";
 import SfFilter from "./src/components/molecules/SfFilter/SfFilter.js";
 import SfGallery from "./src/components/molecules/SfGallery/SfGallery.js";
 import SfMenuItem from "./src/components/molecules/SfMenuItem/SfMenuItem.js";
+import SfNotification from "./src/components/molecules/SfNotification/SfNotification.js";
 import SfOptions from "./src/components/molecules/SfOptions/SfOptions.js";
 import SfPagination from "./src/components/molecules/SfPagination/SfPagination.js";
 import SfProductCard from "./src/components/molecules/SfProductCard/SfProductCard.js";
@@ -60,5 +61,6 @@ export {
   SfList,
   SfMegaMenu,
   SfTopBar,
-  SfStoreLocator
+  SfStoreLocator,
+  SfNotification
 };
