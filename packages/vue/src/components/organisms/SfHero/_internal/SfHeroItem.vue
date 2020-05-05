@@ -54,19 +54,57 @@ export default {
       default: "",
     },
   },
-  computed: {
-    style() {
-      const image = this.image;
-      const background = this.background;
-      return {
-        "--_hero-item-background-image": image.mobile
-          ? `url(${image.mobile})`
-          : `url(${image})`,
-        "--_hero-item-background-desktop-image":
-          image.desktop && `url(${image.desktop})`,
-        "--_hero-item-background-color": background,
-      };
+  data() {
+    return {
+      style: {},
+    };
+  },
+  watch: {
+    image: {
+      handler: function (value) {
+        const image = this.image;
+        return (this.style = {
+          "--_hero-item-background-image": image.mobile
+            ? `url(${image.mobile})`
+            : `url(${image})`,
+          "--_hero-item-background-desktop-image":
+            image.desktop && `url(${image.desktop})`,
+          ...this.style,
+        });
+      },
+      immediate: true,
+    },
+    background: {
+      handler: function (value) {
+        const background = this.background;
+        return (this.style = {
+          "--_hero-item-background-color": background,
+          ...this.style,
+        });
+      },
+      immediate: true,
     },
   },
+  // computed: {
+  //   style: {
+  //     get: function() {
+  //       return {
+  //         image: this.image,
+  //         background: this.background,
+  //       }
+  //     },
+  //     set: function(newValue) {
+  //       let {image, background} = newValue;
+  //          return {
+  //         "--_hero-item-background-image": image.mobile
+  //           ? `url(${image.mobile})`
+  //           : `url(${image})`,
+  //         "--_hero-item-background-desktop-image":
+  //           image.desktop && `url(${image.desktop})`,
+  //         "--_hero-item-background-color": background,
+  //       }
+  //     }
+  //   },
+  // },
 };
 </script>
