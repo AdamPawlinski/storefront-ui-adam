@@ -2,7 +2,7 @@
   <div id="app" class="circle-category">
     <SfHeader 
       :logo="logo"
-      title="Circle K logo"
+      title="CircleK logo"
     >
       <template #navigation>
         <SfHeaderNavigationItem
@@ -28,7 +28,7 @@
       </div>
     </section>
     <section class="circle-category__main">
-      <div class="circle-category__sidebar">
+      <aside class="circle-category__sidebar">
         <SfAccordion :multiple="true" :showChevron="false" :open="getAccordionItemsHeader()" >
           <SfAccordionItem 
               class="circle-category__filter"
@@ -52,7 +52,7 @@
             </template>
           </SfAccordionItem>
         </SfAccordion>
-      </div>
+      </aside>
       <div class="circle-category__products">
         <SfProductCard
           class="circle-category__product"
@@ -61,6 +61,7 @@
           :regularPrice="product.price"
           :title="product.title"
           wishlistIcon="heart"
+          :data-subtitle-content="product.subtitle"
         >        
         </SfProductCard>
       </div>
@@ -72,7 +73,9 @@
       <SfFooterColumn class="circle-category__footer-column" v-for="(column, key) in footerColumns" :key="key" :title="column.header">
         <SfList v-if="column.items">
           <SfListItem v-for="item in column.items" :key="item">
-            {{item}}
+            <SfLink href="#">
+              {{item}}
+            </SfLink>
           </SfListItem>
         </SfList>
         <div v-else-if="column.pictures">
@@ -310,6 +313,11 @@ export default {
         transform: translate3d(0, 50%, 0);
       }
     }
+    &__action:hover,
+    &__action:active
+     {
+      --icon-color: var(--color-active);
+    }
   }
   &__upper-bar {
     display: flex;
@@ -403,7 +411,7 @@ export default {
       position: relative;
       &:before {
         position: absolute;
-        content: "health and beauty";
+        content: "health and beauty"; // these should work, but it does't: attr(data-subtitle-content string, "health and beauty")
         top: calc(var(--spacer-base) * -1);
         color: #72757E;
         font-size: 10px;
@@ -417,6 +425,9 @@ export default {
     position: relative;
     background-color: var(--c-text);
     &-column {
+      --link-text-decoration: none;
+      --link-font-weight: normal;
+      --link-font-size: var(--font-sm);
       text-align: left;
     }
     button {
