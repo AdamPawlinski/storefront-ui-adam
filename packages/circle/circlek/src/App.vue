@@ -54,6 +54,12 @@
         </SfAccordion>
       </aside>
       <div class="circle-category__products">
+        <SfButton @click="visible = !visible">
+          otwórz
+        </SfButton>
+        <SfModal :visible="visible" @close="visible = false">
+          treść
+        </SfModal>
         <SfProductCard
           class="circle-category__product"
           v-for="(product, key) in products" :key="key"
@@ -104,7 +110,8 @@ import {SfHeader,
     SfImage,
     SfMenuItem,
     SfScrollable,
-    SfButton
+    SfButton,
+    SfModal
     } from '@storefront-ui/vue'
 
 export default {
@@ -123,10 +130,12 @@ export default {
     SfImage,
     SfMenuItem,
     SfScrollable,
-    SfButton
+    SfButton,
+    SfModal
   },
   data() {
     return {
+      visible: false,
       logo: require("./assets/logo.png"),
       navigation: ["home", "products", "our stores"],
       breadcrumbs: [
@@ -254,7 +263,8 @@ export default {
       ]
     }
   },
-  methods: {
+  methods: 
+  {
     getAccordionItemsHeader() {
       return this.sidebarAccordion.map(
         item => item.header 
