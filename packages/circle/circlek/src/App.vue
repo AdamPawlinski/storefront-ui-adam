@@ -58,7 +58,15 @@
           otwórz
         </SfButton>
         <SfModal :visible="visible" @close="visible = false">
-          treść
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl auctor dui euismod condimentum. In quis dui augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet vestibulum ipsum mollis bibendum. Fusce vestibulum nisi eu velit bibendum, id commodo enim efficitur. Nulla imperdiet convallis ligula, nec suscipit lacus blandit ut. Proin mollis molestie enim ut auctor.</p>
+
+<p>Proin dapibus interdum augue sed egestas. In porta dolor et efficitur rutrum. Ut sed ligula sit amet urna tempus vehicula eu id leo. Proin fringilla eu felis eu ultricies. Curabitur sagittis lectus sed nunc euismod mollis ac at neque. Duis lorem augue, volutpat a mi vitae, tincidunt luctus sapien. Phasellus eu accumsan erat, ut eleifend risus. Suspendisse vitae lectus molestie, iaculis libero non, gravida nulla. Vivamus eu tincidunt ipsum. Curabitur ac vehicula neque, non elementum quam. Aenean maximus ipsum diam, vehicula hendrerit lorem iaculis nec.</p>
+
+<p>Phasellus in venenatis nibh. Curabitur egestas dignissim lacus ut lacinia. Curabitur tempus dui sed egestas interdum. Fusce sit amet risus eget ex efficitur facilisis. Ut gravida non lectus vitae condimentum. Maecenas felis turpis, dignissim at enim sed, ornare congue urna. Etiam ultricies ligula vitae varius hendrerit. Ut suscipit nisi consectetur, tincidunt dui et, blandit odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer ut neque vel tellus viverra viverra at vitae nulla. Quisque eu faucibus lacus, ut iaculis lacus. Fusce quis pharetra nunc. Proin sed tellus vitae neque molestie auctor sit amet et justo.</p>
+
+<p>Etiam viverra massa metus, at volutpat enim laoreet ut. Donec quam augue, placerat quis nibh id, fermentum facilisis sem. Nulla iaculis porttitor bibendum. Donec eget gravida nulla. Suspendisse in dolor facilisis, sagittis nisi quis, luctus erat. Curabitur pellentesque fringilla massa, iaculis venenatis turpis luctus et. Nulla efficitur, lorem sed vehicula ornare, libero tortor pellentesque augue, eu feugiat urna arcu nec nisi. Aenean consequat magna id nulla hendrerit, non iaculis velit luctus. Nam sagittis leo varius massa pellentesque lacinia quis sed odio. Nam tempus, elit a mollis consequat, metus lorem feugiat diam, a tristique arcu nisl ac nibh. Vivamus iaculis massa ac auctor ultricies. Morbi et nibh ultricies, tempor felis eu, hendrerit odio. Pellentesque accumsan dolor eget sem molestie, eget euismod neque vestibulum.</p>
+
+<p>Pellentesque eget lacus felis. Phasellus at feugiat velit, in euismod tortor. In pharetra tellus a metus eleifend mollis. Integer semper a arcu in venenatis. Maecenas vel sapien accumsan, finibus lectus quis, aliquam ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse sed eros ut magna mattis volutpat. Vivamus eget nulla velit. Vestibulum congue molestie erat sed tincidunt.
         </SfModal>
         <SfProductCard
           class="circle-category__product"
